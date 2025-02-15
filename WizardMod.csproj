@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<!-- Import tModLoader mod properties -->
+	<Import Project="..\tModLoader.targets" />
+  <PropertyGroup>
+    <AssemblyName>WizardMod</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="ReLogic">
+      <HintPath>D:\Program Files (x86)\Steam\steamapps\common\tModLoader\Libraries\ReLogic\1.0.0\ReLogic.dll</HintPath>
+    </Reference>
+    <Reference Include="tModLoader">
+      <HintPath>D:\Program Files (x86)\Steam\steamapps\common\tModLoader\tModLoader.dll</HintPath>
+    </Reference>
+    <Reference Include="FNA">
+      <HintPath>D:\Program Files (x86)\Steam\steamapps\common\tModLoader\Libraries\FNA\1.0.0\FNA.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Localization\" />
+  </ItemGroup>
+</Project>

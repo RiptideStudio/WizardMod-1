@@ -1,0 +1,70 @@
+From the creators of Archery Overhaul comes Sorcery Overhaul for 1.4!
+
+Sorcery Overhaul focuses on improving magic items in Terraria. We've added over 100+ unique magic items including armor, weapons, materials, 
+accessories, spells, scrolls, & more!
+
+This mod currently adds in the following 100+ items:
+
+. 32 New Staffs
+. 24 New Magic Tomes
+. 13 New Accessories
+. 14 New Materials
+. 6 New Consumables
+. 4 New Armor Sets
+. 6 New Prefixes/Reforges
+. 10 New Spells
+. 14 Recipes for existing vanilla items
+. 4 Modified vanilla items
+. 2 New Enemies
+. 1 New NPC
+
+Unique Features:
+
+. Spell Power - Spell Power gives magic weapons secondary effects, and effect chance and power increases as spell power is increased. 
+. Critical Strike Mana Recovery - Upon critical hit, some mana will be restored, can be increased by accessories and armor
+. Spells - New consumable itemst that uses spell power as a damage type
+. Scrolls - Incredibly powerful consumable items that be crafted or bought from the Apprentice NPC
+
+Stick with us as we finish up hardmode and complete the mod!
+
+If you didn't know, I'm actually a game developer, and I make tons of art, music and more! (This is my first terraria mod, criticism is welcome!) If you want to share your work and have fun, 
+or want a list of the items in this mod, join my discord below! We try to update the mod every other week. If you want to help make sprites or code for the mod, join my Discord and send me a message!
+
+Discord: https://discord.gg/4ny8w74
+
+If you want to support both my terraria mods and my games, become a patron for a custom donor item and other special rewards! 
+
+Patreon: https://www.patreon.com/RipStudios
+
+= Overhaul Team =:
+
+Riptide
+Mutater
+PootisTweet
+Canbash
+
+== IMPORTANT ==
+
+Check out the new wiki from Sorcery Overhaul!
+https://terrariamods.fandom.com/wiki/Sorcery_Overhaul
+
+
+== CHANGELOG ==
+
+== v 1.2.8 - 1.4 Is Here! ==
+
+. 2 New Hardmode Tomes, "The Monsoon" and "Crystal Flames"
+. 1 New Early-Game scroll, "Living Scroll" which can be crafted or found in wooden chests
+. 2 New Hardmode Spells, "Greater Healing Spell" and "Greater Mana Spell"
+. Death Eater Armor Lightning no longer creates a chain reaction
+. Wizard Tome tooltip fixed
+. Moonsoon Nerfed, less lag
+. Fixed some bugs
+. Changed some recipes to be less grindy
+. Updated some sprites
+
+
+
+
+
+

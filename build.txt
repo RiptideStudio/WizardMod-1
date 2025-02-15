@@ -1,0 +1,4 @@
+displayName = Sorcery Overhaul
+author = Riptide
+version = 1.0.35
+homepage = https://discord.gg/XbzKuFg

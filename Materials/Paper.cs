@@ -1,0 +1,31 @@
+using Terraria;
+using Terraria.ModLoader;
+
+namespace WizardMod.Materials;
+
+public class Paper : ModItem
+{
+	public override void SetStaticDefaults()
+	{
+		// DisplayName.SetDefault("Paper");
+		// Tooltip.SetDefault("Used to craft scrolls and books");
+	}
+
+	public override void SetDefaults()
+	{
+		Item.width = 16;
+		Item.height = 32;
+		Item.maxStack = 999;
+		Item.value = 100;
+		Item.rare = 1;
+		Item.noMelee = true;
+	}
+
+	public override void AddRecipes()
+	{
+		Recipe recipe = CreateRecipe(5);
+		recipe.AddRecipeGroup("Wood");
+		recipe.AddTile(106);
+		recipe.Register();
+	}
+}

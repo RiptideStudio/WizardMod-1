@@ -1,0 +1,124 @@
+using System;
+using Microsoft.Xna.Framework;
+using Terraria;
+using Terraria.Audio;
+using Terraria.ID;
+using Terraria.ModLoader;
+
+namespace WizardMod.Projectiles;
+
+public class HomingCrimson : ModProjectile
+{
+	private int time;
+
+	private int dust_num = 162;
+
+	private int dust_num2 = 6;
+
+	public override void SetStaticDefaults()
+	{
+		// DisplayName.SetDefault("Sand Proj2");
+		ProjectileID.Sets.TrailCacheLength[Projectile.type] = 5;
+		ProjectileID.Sets.TrailingMode[Projectile.type] = 0;
+	}
+
+	public override void SetDefaults()
+	{
+		Projectile.width = 12;
+		Projectile.height = 12;
+		Projectile.aiStyle = 1;
+		Projectile.DamageType = DamageClass.Magic;
+		Projectile.friendly = true;
+		Projectile.hostile = false;
+		Projectile.penetrate = 2;
+		Projectile.timeLeft = 600;
+		Projectile.light = 0.2f;
+		Projectile.ignoreWater = true;
+		Projectile.tileCollide = false;
+		Projectile.extraUpdates = 1;
+		Projectile.scale = 0.5f;
+		DrawOffsetX = -4;
+	}
+
+	public override bool OnTileCollide(Vector2 oldVelocity)
+	{
+		//IL_0015: Unknown result type (might be due to invalid IL or missing references)
+		SoundEngine.PlaySound(SoundID.Dig, (Vector2?)Projectile.position);
+		return true;
+	}
+
+	public override void AI()
+	{
+		this.time++;
+		if (this.time > 0)
+		{
+			Vector2 move = Vector2.Zero;
+			float distance = 350f;
+			bool target = false;
+			for (int i = 0; i < 200; i++)
+			{
+				if (Main.npc[i].active && !Main.npc[i].dontTakeDamage && !Main.npc[i].friendly && Main.npc[i].lifeMax > 5)
+				{
+					Vector2 newMove = Main.npc[i].Center - Projectile.Center;
+					float distanceTo = (float)Math.Sqrt((double)(newMove.X * newMove.X + newMove.Y * newMove.Y));
+					if (distanceTo < distance)
+					{
+						move = newMove;
+						distance = distanceTo;
+						target = true;
+					}
+				}
+			}
+			if (target)
+			{
+				Projectile.tileCollide = false;
+				this.AdjustMagnitude(ref move);
+				Projectile.velocity = (Projectile.velocity + move) / 4f;
+				this.AdjustMagnitude(ref Projectile.velocity);
+			}
+		}
+		if (Projectile.timeLeft < 570)
+		{
+			int dust3 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, 5);
+			Main.dust[dust3].velocity *= 0.2f;
+		}
+		else
+		{
+			int dust2 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, 5);
+			Main.dust[dust2].velocity *= 0.5f;
+		}
+	}
+
+	private void AdjustMagnitude(ref Vector2 vector)
+	{
+		if (this.time > 0)
+		{
+			float magnitude = (float)Math.Sqrt((double)(vector.X * vector.X + vector.Y * vector.Y));
+			if (magnitude > 8.5f)
+			{
+				vector *= 8.5f / magnitude;
+			}
+		}
+	}
+
+	public override void OnKill(int timeLeft)
+	{
+		//IL_0027: Unknown result type (might be due to invalid IL or missing references)
+		_ = Main.player[Projectile.owner];
+		SoundEngine.PlaySound(SoundID.NPCHit13, (Vector2?)Projectile.position);
+		for (int num369 = 0; num369 < 16; num369++)
+		{
+			int num370 = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 5, 0f, 0f, 100, default(Color), 1.5f);
+			Main.dust[num370].velocity *= 1.4f;
+			Main.dust[num370].noGravity = true;
+		}
+		for (int num371 = 0; num371 < 10; num371++)
+		{
+			int num372 = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 12, 0f, 0f, 100, default(Color), 2.5f);
+			Main.dust[num372].noGravity = true;
+			Main.dust[num372].velocity *= 2f;
+			num372 = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 5, 0f, 0f, 100, default(Color), 1.5f);
+			Main.dust[num372].velocity *= 2f;
+		}
+	}
+}

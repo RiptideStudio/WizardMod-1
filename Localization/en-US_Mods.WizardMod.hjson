@@ -1,0 +1,1333 @@
+Tiles: {
+	ArcaneTable.MapEntry: Arcane Table
+	WizardTable.MapEntry: The Arcanum
+}
+
+Buffs: {
+	ArcaneBuff: {
+		DisplayName: Arcane Power
+		Description: Magic and comat capabilities greatly increased
+	}
+
+	ArcaneDebuff: {
+		DisplayName: Arcane Cooldown
+		Description: The Arcane Power buff is on cooldown
+	}
+
+	ArcaneShieldBuff: {
+		DisplayName: Magic Barrier
+		Description: A magic barrier surrounds you
+	}
+
+	ArcaneShieldCooldown: {
+		DisplayName: Magic Barrier Cooldown
+		Description: The Magic Barrier is on cooldown
+	}
+
+	DarknessDebuff: {
+		DisplayName: Sharpened Arrows
+		Description: Arrow damage increased by 10%
+	}
+
+	DarknessDebuff_2: {
+		DisplayName: Sharpened Arrows
+		Description: Arrow damage increased by 10%
+	}
+
+	DarknessDebuff_3: {
+		DisplayName: Sharpened Arrows
+		Description: Arrow damage increased by 10%
+	}
+
+	DeepslateBuff: {
+		DisplayName: Sharpened Arrows
+		Description: Arrow damage increased by 10%
+	}
+
+	ElectrifiedBuff: {
+		DisplayName: Electrified
+		Description: You are charged with electricity
+	}
+
+	LifestealDebuff: {
+		DisplayName: Sharpened Arrows
+		Description: Arrow damage increased by 10%
+	}
+
+	LightDebuff: {
+		DisplayName: Sharpened Arrows
+		Description: Arrow damage increased by 10%
+	}
+
+	LightDebuff2: {
+		DisplayName: Sharpened Arrows
+		Description: Arrow damage increased by 10%
+	}
+
+	LightDebuff3: {
+		DisplayName: Sharpened Arrows
+		Description: Arrow damage increased by 10%
+	}
+
+	LightDebuff4: {
+		DisplayName: Sharpened Arrows
+		Description: Arrow damage increased by 10%
+	}
+
+	ManaBuff: {
+		DisplayName: ""
+		Description: ""
+	}
+
+	RadiationDebuff: {
+		DisplayName: Sharpened Arrows
+		Description: Arrow damage increased by 10%
+	}
+
+	RottenDebuff: {
+		DisplayName: Sharpened Arrows
+		Description: Arrow damage increased by 10%
+	}
+
+	SlowBuff: {
+		DisplayName: Sharpened Arrows
+		Description: Arrow damage increased by 10%
+	}
+
+	SpellDebuff: {
+		DisplayName: Spell Shock
+		Description: You can't throw spells!
+	}
+}
+
+Items: {
+	AetherAmulet: {
+		DisplayName: Aether Amulet
+		Tooltip:
+			'''
+			Greatly increased invincibility time after being hit
+			When hit, the player receives the Arcane Buff, which increases magic capabilities
+			Arcane Buff has a 30 second cooldown after being activated
+			'''
+	}
+
+	ArcaneOrb: {
+		DisplayName: Arcane Orb
+		Tooltip:
+			'''
+			Holds pure sorcery magic
+			Magic damage and critical strike chance increased by 5%
+			Spell power increased by 1
+			'''
+	}
+
+	ArcaneShield: {
+		DisplayName: Arcane Shield
+		Tooltip:
+			'''
+			'You are protected by magic'\nDefense increased by 12%
+			When hit, a magic barrier is created around the player, dealing damage to anything that comes near you
+			The power of the magic barrier scales with magic critical strike chance
+			Has a 10 second cooldown\nGrants knockback and fireblock immunity
+			'''
+	}
+
+	CelestialHoop: {
+		DisplayName: Celestial Hoop
+		Tooltip:
+			'''
+			Increases maximum mana by 40
+			7% increased magic damage and critical strike chance
+			Spell power increased by 1
+			Causes stardust scythes to be released when hit
+			'''
+	}
+
+	ChaosEnchantment: {
+		DisplayName: Chaos Enchantment
+		Tooltip:
+			'''
+			'Let the chaos reign!'
+			Debuffs spread to nearby enemies every second
+			Re-applied debuffs quickly disappear
+			'''
+	}
+
+	ClearCrystal: {
+		DisplayName: Clear Stone
+		Tooltip:
+			'''
+			Max mana increased by 40
+			Critical strike mana recovery increased by 1
+			Spell power increased by 1
+			'''
+	}
+
+	ConjurerCrystal: {
+		DisplayName: Conjurer's Crystal
+		Tooltip:
+			'''
+			Max mana increased by 40
+			Max life increased by 40
+			Mana and life regeneration increased
+			Critical strike mana recovery increased by 2
+			Spell power increased by 1
+			'''
+	}
+
+	CorruptRing: {
+		DisplayName: Corrupt Ringlet
+		Tooltip:
+			'''
+			Magic attacks may cause enemies to rot or decay
+			After 250 damage is dealt, small homing corrupt particles are released
+			'''
+	}
+
+	EnchantedWard: {
+		DisplayName: Enchanted Shield
+		Tooltip:
+			'''
+			'You are protected by magic'
+			Magically increases defense
+			The lower your health, the greater the protection
+			Has a maximum defense of 12
+			'''
+	}
+
+	LifeCrystal: {
+		DisplayName: Pure Stone
+		Tooltip:
+			'''
+			Max life increased by 40
+			Life regeneration slightly increased
+			'''
+	}
+
+	LunarLoop: {
+		DisplayName: Stardust Loophole
+		Tooltip:
+			'''
+			Increases maximum mana by 20
+			7% increased magic damage
+			Spell power increased by 1
+			'''
+	}
+
+	MoltenRing: {
+		DisplayName: Molten Ring
+		Tooltip:
+			'''
+			While in combat, a phoenix will occasionally dive bomb your enemies
+			Magic attacks have a chance to inflict deep burns
+			'''
+	}
+
+	OvergrownPendant: {
+		DisplayName: Overgrown Pendant
+		Tooltip:
+			'''
+			Enemies explode into vilethorns when killed
+			Magic attacks have a chance to poison enemies
+			'''
+	}
+
+	VampireRing: {
+		DisplayName: Vampire's Circlet
+		Tooltip:
+			'''
+			Magic attacks may cause enemies to bleed
+			After 300 damage is dealt, small homing crimson particles are released
+			Homing particles steal life
+			'''
+	}
+
+	Beard: {
+		DisplayName: Familar Looking Beard
+		Tooltip: A beard for those who have bad hair genes
+	}
+
+	DeepslateChestplate: {
+		DisplayName: Deepslate Chestplate
+		Tooltip: Magic critical strike chance and damage increased by 6%
+	}
+
+	DeepslateHood: {
+		DisplayName: Deepslate Hood
+		Tooltip:
+			'''
+			12% Increased magic damage
+			Max mana increased by 80
+			'''
+	}
+
+	DeepslateLegs: {
+		DisplayName: Deepslate Leggings
+		Tooltip:
+			'''
+			12% Increased movement speed
+			Critical strike mana recovery increased by 2
+			'''
+	}
+
+	EnchantedHead: {
+		DisplayName: Enchanted Cowl
+		Tooltip:
+			'''
+			5% Increased magic damage
+			Max mana increased by 40
+			'''
+	}
+
+	EnchantedLegs: {
+		DisplayName: Enchanted Legs
+		Tooltip:
+			'''
+			5% Increased magic damage
+			7% Increased movement speed
+			'''
+	}
+
+	EnchantedTunic: {
+		DisplayName: Enchanted Tunic
+		Tooltip:
+			'''
+			3% Increased magic damage and critical strike chance
+			Mana usage reduced by 7%
+			Max mana increased by 20
+			Critical strike mana recvovery increased by 1
+			'''
+	}
+
+	GandalfHat: {
+		DisplayName: Death Eater's Hat
+		Tooltip:
+			'''
+			15% Increased magic damage
+			Mana usage reduced by 12%
+			'''
+	}
+
+	GandalfLegs: {
+		DisplayName: Death Eater's Pants
+		Tooltip:
+			'''
+			15% increased movement speed
+			Critical strike mana recovery increased by 4
+			Spell power increased by 5
+			'''
+	}
+
+	GandalfRobe: {
+		DisplayName: Death Eater's Robe
+		Tooltip:
+			'''
+			7% increased magic damage and critical strike chance
+			Max mana increased by 120
+			'''
+	}
+
+	LivingWoodLegs: {
+		DisplayName: Living Leggings
+		Tooltip: 5% Increased movement speed
+	}
+
+	LivingWoodMask: {
+		DisplayName: Living Hood
+		Tooltip: 5% Increased magic damage
+	}
+
+	LivingWoodRobe: {
+		DisplayName: Living Tunic
+		Tooltip:
+			'''
+			Max mana increased by 20
+			Mana usage reduced by 5%
+			'''
+	}
+
+	ArcaneTableItem: {
+		DisplayName: Arcane Table
+		Tooltip:
+			'''
+			'You're a wizard!'
+			Used to make magical items
+			'''
+	}
+
+	WizardTableItem: {
+		DisplayName: The Arcanum
+		Tooltip: Used to forge strong, celestial gear
+	}
+
+	EnchantedDagger: {
+		DisplayName: Enchanted Dagger
+		Tooltip: Like a knife, but magic
+	}
+
+	PocketFireball: {
+		DisplayName: Pocket Fireball
+		Tooltip:
+			'''
+			Useful for a mage on the run
+			Briefly lights enemies on fire
+			'''
+	}
+
+	AmethystScepter: {
+		DisplayName: Amethyst Trident
+		Tooltip: Launches a volley of amethyst bolts
+	}
+
+	ApprenticeTome: {
+		DisplayName: Inept Tome
+		Tooltip:
+			'''
+			Shoots a weak magic bolt
+			Inflicts Cleansing debuff, which causes enemies to release healing orbs
+			Healing orb power scales with spell power
+			'''
+	}
+
+	AquaticFury: {
+		DisplayName: Aquatic Fury
+		Tooltip:
+			'''
+			Fires a powerful blast of water
+			Releases mini water-bolts on impact
+			'''
+	}
+
+	AshenStaff: {
+		DisplayName: Deepslate Staff
+		Tooltip: Launches a volley of flaming rocks
+	}
+
+	AurorStaff: {
+		DisplayName: Auror's Staff
+		Tooltip:
+			'''
+			Charges the player with electricity
+			Zaps any enemies that come near you or hit you
+			Can target multiple enemies
+			'''
+	}
+
+	BatStaff: {
+		DisplayName: Bat-Swarm Staff
+		Tooltip: Casts a ball of poisonus gunk that causes bats to swarm the enemy
+	}
+
+	BloodRippleStaff: {
+		DisplayName: The Bloodrippler
+		Tooltip: Creates a swirling shockwave of blood on impact
+	}
+
+	BuriedTome: {
+		DisplayName: Buried Tome
+		Tooltip: Shoots a rock that smashes open upon impact and confuses enemies
+	}
+
+	CelestialSky: {
+		DisplayName: Celestial Sky
+		Tooltip: Shoots a pair of rapidly rotating star-discs that home in on enemies
+	}
+
+	ChainSpaceGun: {
+		DisplayName: Chain Space Gun
+		Tooltip:
+			'''
+			Rapidly shoots lasers
+			Is slightly inaccurate
+			'Pew-pew!'
+			'''
+	}
+
+	CursedFlames: {
+		DisplayName: Crystal Flames
+		Tooltip:
+			'''
+			Spews out a mix of cursed flames and crystals
+			Is slightly inaccurate
+			'''
+	}
+
+	Cyclone: {
+		DisplayName: The Cyclone
+		Tooltip:
+			'''
+			Left-click to cast countless forks of lightning
+			Right-click to drop a devastating thunderbolt for 25 mana
+			Lightning coils jump to a nearby enemy
+			'''
+	}
+
+	DarkTome: {
+		DisplayName: Dark Tome
+		Tooltip:
+			'''
+			Shoots a dark bolt of magic
+			Causes enemies to decay
+			'Harness the power of dark magic'
+			'''
+	}
+
+	DeepslateHamaxe: {
+		DisplayName: Deepslate Waraxe
+		Tooltip: "'Trees hate him!'"
+	}
+
+	DeepslatePickaxe: {
+		DisplayName: Deepslate Pickaxe
+		Tooltip: ""
+	}
+
+	DeepslateTome: {
+		DisplayName: Ashen Tome
+		Tooltip: Launches a deepslate assault from the skies
+	}
+
+	DemonGauntlet: {
+		DisplayName: Dread Cutter [Unfinished]
+		Tooltip:
+			'''
+			Left-click to jab and swing at enemies
+			Right-click to slash multiple enemies
+			'''
+	}
+
+	DemonWaveStaff: {
+		DisplayName: Demonwave Staff
+		Tooltip: Creates a swirling shockwave on impact
+	}
+
+	DiamondScepter: {
+		DisplayName: The Diamond Tendril
+		Tooltip: Casts a volley of diamond bolts
+	}
+
+	EbonwoodStaff: {
+		DisplayName: Ebonwood Staff
+		Tooltip: Shoots a bolt of darkness
+	}
+
+	EmeraldScepter: {
+		DisplayName: Emerald Scepter
+		Tooltip: Sprays your enemies with emerald water
+	}
+
+	EnchantedGauntlet: {
+		DisplayName: Enchanted Gauntlet
+		Tooltip:
+			'''
+			Left-click to launch your fist
+			Right-click to temporarily charge your fist for 10 mana
+			'''
+	}
+
+	EnchantedTome: {
+		DisplayName: Enchanted Tome
+		Tooltip: Rapidly shoots bolts of pure magic
+	}
+
+	Energizer: {
+		DisplayName: Energy Blaster
+		Tooltip: Launches green spheres of energy that explode into miniature homing particles
+	}
+
+	EnergyStaff: {
+		DisplayName: Ancient Wand
+		Tooltip:
+			'''
+			Creates a healing rune around the cursor that scales with spell power
+			Any enemies that touch the rune are poisoned
+			'''
+	}
+
+	Fiendfyre: {
+		DisplayName: Fiendfyre
+		Tooltip:
+			'''
+			Hold left-click to cast a massive concentrated blast of deep-burning fire
+			'Set the whole bloody place on fire!'
+			'''
+	}
+
+	FireBolt: {
+		DisplayName: Magma Wave
+		Tooltip: Shoots a slow moving wave of magma
+	}
+
+	FrostBolt: {
+		DisplayName: Permafrost
+		Tooltip:
+			'''
+			Rapidly launches bolts of ice
+			Has a chance to freeze weaker enemies
+			'''
+	}
+
+	Glacier: {
+		DisplayName: The Glacier
+		Tooltip:
+			'''
+			Shoots a huge blast of piercing ice at high speeds
+			Fills the sky with icy shards flung out of the projectile
+			'''
+	}
+
+	GoreDrinker: {
+		DisplayName: Goredrinker
+		Tooltip:
+			'''
+			Left-click to launch a bloody spine, which lifesteals against enemies inflicted with draining
+			Right-click to shoot a bloody projectile that inflicts draining
+			'''
+	}
+
+	GreenGauntlet: {
+		DisplayName: Bramble Bracer
+		Tooltip:
+			'''
+			Left-click to shoot a burst of poisonous wooden spikes
+			Right-click to slash enemies
+			'''
+	}
+
+	Hailstorm: {
+		DisplayName: Hailstorm
+		Tooltip: Rapidly rains frozen bombs from the sky
+	}
+
+	LavacoreStaff: {
+		DisplayName: Lavacore Staff
+		Tooltip: Launches a volley of frozen and flaming rocks
+	}
+
+	LeafTome: {
+		DisplayName: Leaf Tome
+		Tooltip:
+			'''
+			Rapidly pelts your enemy with leaves
+			Is slightly inaccurate
+			'''
+	}
+
+	LightningTome: {
+		DisplayName: The Zap
+		Tooltip: Creates a breif electric current at the player's cursor, releasing tendrils of electricty
+	}
+
+	LivingStaff: {
+		DisplayName: Mossy Wand
+		Tooltip:
+			'''
+			Shoots a sphere of natural energy
+			Releases green bolts of energy at nearby enemies
+			'''
+	}
+
+	MagmaSphere: {
+		DisplayName: Magma Sphere
+		Tooltip:
+			'''
+			Casts glowing spheres of flaming energy which zaps nearby enemies
+			Multiple spheres can exist at the same time
+			'''
+	}
+
+	MasterTome: {
+		DisplayName: Sorcerer's Tome
+		Tooltip:
+			'''
+			Shoots a coil of powerful magic that slightly homes in on enemies
+			Inflicts Cleansing debuff
+			'''
+	}
+
+	Molder: {
+		DisplayName: The Moulderer
+		Tooltip:
+			'''
+			Left-click to launch a piercing rotten tooth, which deals more damage against rotting enemies
+			Right-click to shoot an infectious projectile that inflicts rotting
+			'''
+	}
+
+	Monsoon: {
+		DisplayName: The Monsoon
+		Tooltip:
+			'''
+			Fires multiple powerful blasts of water
+			Creates small water typhoons on impact
+			'''
+	}
+
+	MotherEarth: {
+		DisplayName: Mother Earth [Uncoded]
+		Tooltip: "'Contains the destructive power of the earth itself'"
+	}
+
+	NecroticTome: {
+		DisplayName: Necrotic Tome
+		Tooltip:
+			'''
+			Launches a volley of life stealing dark orbs
+			Bounces off walls
+			'''
+	}
+
+	RadiationCannon: {
+		DisplayName: Radiation Cannon
+		Tooltip:
+			'''
+			Launches an ion blast which explodes into lots of homing particles
+			Inflicts radiation sickness debuff on impact
+			'''
+	}
+
+	RainbowStaff: {
+		DisplayName: Gemspark Flash
+		Tooltip:
+			'''
+			Has the effects of all gem staffs
+			Casts an emerald raindrop every second attack
+			Casts a topaz beam every third attack
+			Shoots a burst of rainbow beams every fourth attack
+			Acts as a spear
+			'''
+	}
+
+	Reaper: {
+		DisplayName: The Reaper
+		Tooltip:
+			'''
+			Consumes your foe in dark magic
+			'It was in the restricted section'
+			'''
+	}
+
+	Relic: {
+		DisplayName: The Relic
+		Tooltip:
+			'''
+			Launches a dusty fossil that creates an explosion of sand on impact
+			Creates piercing rocks that linger on the ground and damage enemies that step on them
+			Lingering rocks shrink and eventually explode
+			'''
+	}
+
+	RubyScepter: {
+		DisplayName: Ruby Pike
+		Tooltip: Casts a ruby beam while simultaneous stabbing enemies
+	}
+
+	SapphireScepter: {
+		DisplayName: Sapphire Caduceus
+		Tooltip: Casts a sapphire beam that releases smaller sapphire bolts every fourth shot
+	}
+
+	ShadewoodStaff: {
+		DisplayName: Shadewood Staff
+		Tooltip: Shoots a bolt of blood
+	}
+
+	ShadowTome: {
+		DisplayName: Shadow Tome
+		Tooltip:
+			'''
+			Launches a piercing dark magic bolt
+			Causes enemies to decay
+			Decaying effect stacks twice
+			'''
+	}
+
+	SorcererTome: {
+		DisplayName: Apprentice Tome
+		Tooltip:
+			'''
+			Shoots a magic bolt that bounces off walls and releases healing bolts on impact
+			Inflicts Cleansing debuff
+			'''
+	}
+
+	SparkStaff: {
+		DisplayName: Staff of Sparking
+		Tooltip: Casts a wave of sparks
+	}
+
+	SpiralWand: {
+		DisplayName: Death Eater Wand
+		Tooltip:
+			'''
+			Hold left-click to turn into a dark spiral
+			Rapidly drains your mana
+			Homing rotting skulls are released while active
+			Allows the player to go through walls
+			'''
+	}
+
+	StardustStaff: {
+		DisplayName: Stardust Slicer
+		Tooltip: Shoots rapidly rotating star-discs
+	}
+
+	StormSender: {
+		DisplayName: Storm Sender
+		Tooltip:
+			'''
+			Casts multiple bolts of lightning which bounce off walls
+			The forked lightning now deals halved damage
+			'''
+	}
+
+	Supernova: {
+		DisplayName: Supernova
+		Tooltip:
+			'''
+			Left-click to shoot a pair of rapidly rotating star-discs that home in on enemies
+			Right-click to plant a deadly supernova for 100 mana
+			Uses true mana
+			'''
+	}
+
+	ThunderStaff: {
+		DisplayName: Thunder Staff
+		Tooltip:
+			'''
+			Casts a small bolt of lightning
+			'It was Zeus's favorite toy as a baby'
+			'''
+	}
+
+	TopazScepter: {
+		DisplayName: Topaz Stave
+		Tooltip: Shoots a yellow beam of light that ricochets off walls
+	}
+
+	TumorTome: {
+		DisplayName: The Tumor
+		Tooltip:
+			'''
+			Shoots tumors which breifly latch onto enemies until they die
+			Drains enemy life upon critical hits
+			Only one tumor can be alive at once
+			'''
+	}
+
+	WaterFront: {
+		DisplayName: The Waterfront
+		Tooltip:
+			'''
+			Casts a slow moving bolt of deep water
+			Creates miniature water bolts that fly upwards and then rain down on impact
+			'''
+	}
+
+	Weeper: {
+		DisplayName: The Weeper
+		Tooltip:
+			'''
+			Casts a blast of dark magic
+			Causes enemies to decay longer
+			Decaying effect stacks thrice
+			'''
+	}
+
+	WildFire: {
+		DisplayName: Wildfire
+		Tooltip:
+			'''
+			Hold left-click to cast a concentrated blast of fire
+			'The Lorax is coming for you...'
+			'''
+	}
+
+	WizardTome: {
+		DisplayName: Wizard's Tome
+		Tooltip:
+			'''
+			Launches a rapid assault of magic
+			Central bolt homes in on enemies
+			Greatly heals allies
+			'''
+	}
+
+	XionTome: {
+		DisplayName: Xion's Dream Tome
+		Tooltip:
+			'''
+			Summons coils of dreamy flames around the player
+			Explodes with a splash of color
+			'''
+	}
+
+	BookRecipe: {
+		DisplayName: Book Recipe
+		Tooltip: ""
+	}
+
+	DeepslateBar: {
+		DisplayName: Deepslate Bar
+		Tooltip: "'Reborn from the ashes'"
+	}
+
+	EnchantedBook: {
+		DisplayName: Enchanted Book
+		Tooltip: Used to craft magic tomes
+	}
+
+	EnchantedShard: {
+		DisplayName: Enchanted Shard
+		Tooltip: Used to create powerful magic gear
+	}
+
+	EnchantedSilk: {
+		DisplayName: Enchanted Silk
+		Tooltip:
+			'''
+			'It's blue now!'
+			Used to create magic gear
+			'''
+	}
+
+	FrozenShard: {
+		DisplayName: Frozen Shard
+		Tooltip: "'It is imbued with ice magic'"
+	}
+
+	InfusedCrystal: {
+		DisplayName: Wizard's Crystal
+		Tooltip:
+			'''
+			Permanently raises your max mana to 200
+			Can only be used once
+			'''
+	}
+
+	InfusedStar: {
+		DisplayName: Lunar Essence
+		Tooltip:
+			'''
+			Used to craft magic weapons and spells
+			'All you need is faith, trust, and stardust!'
+			'''
+	}
+
+	LivingShard: {
+		DisplayName: Living Shard
+		Tooltip: "'Imbued with mother nature's power'"
+	}
+
+	LunarBar: {
+		DisplayName: Crystal Slab
+		Tooltip:
+			'''
+			Used to forge deadly weapons
+			'Contains ancient power'
+			'''
+	}
+
+	MagicSoul: {
+		DisplayName: Magic Essence
+		Tooltip:
+			'''
+			Used to craft magical items
+			Can be traded with the Apprentice
+			'''
+	}
+
+	MetalBand: {
+		DisplayName: Metal Band
+		Tooltip:
+			'''
+			Used to craft magic rings
+			'Beyonce loves it!'
+			'''
+	}
+
+	MoltenShard: {
+		DisplayName: Molten Shard
+		Tooltip: "'It is imbued with fire magic'"
+	}
+
+	Paper: {
+		DisplayName: Paper
+		Tooltip: Used to craft scrolls and books
+	}
+
+	Scroll: {
+		DisplayName: Scroll
+		Tooltip: Used to craft magic scrolls and runes
+	}
+
+	SkyCrystal: {
+		DisplayName: Sky Crystal
+		Tooltip: "'It is imbued with sky magic'"
+	}
+
+	StarterBag: {
+		DisplayName: Wizard's Pouch
+		Tooltip:
+			'''
+			Right-click to open
+			Contains an assortment of magical goods
+			'''
+	}
+
+	XionTomeDamaged: {
+		DisplayName: Damaged Xion's Tome
+		Tooltip:
+			'''
+			You feel ancient power resonate from within
+			Can be repaired
+			'''
+	}
+
+	Cauldron: {
+		DisplayName: Cauldron
+		Tooltip: ""
+	}
+
+	CloudBottle: {
+		DisplayName: Cloud Bottle
+		Tooltip: ""
+	}
+
+	CrimtaneBar: {
+		DisplayName: Crimtane Bar
+		Tooltip: ""
+	}
+
+	CrystalShard: {
+		DisplayName: Crystal Shard
+		Tooltip: ""
+	}
+
+	DemoniteBar: {
+		DisplayName: Demonite Bar
+		Tooltip: ""
+	}
+
+	HerbBag: {
+		DisplayName: Herb Bag
+		Tooltip: ""
+	}
+
+	LifeBand: {
+		DisplayName: Life Band
+		Tooltip: ""
+	}
+
+	LivingWoodWand: {
+		DisplayName: Living Wood Wand
+		Tooltip: ""
+	}
+
+	MagicHat: {
+		DisplayName: Magic Hat
+		Tooltip: ""
+	}
+
+	ManaFlower: {
+		DisplayName: Mana Flower
+		Tooltip: ""
+	}
+
+	ShadowScale: {
+		DisplayName: Shadow Scale
+		Tooltip: ""
+	}
+
+	SorcererEmblem: {
+		DisplayName: Sorcerer Emblem
+		Tooltip: ""
+	}
+
+	StarBand: {
+		DisplayName: Star Band
+		Tooltip: ""
+	}
+
+	TissueSample: {
+		DisplayName: Tissue Sample
+		Tooltip: ""
+	}
+
+	WandOfSparking: {
+		DisplayName: Wand Of Sparking
+		Tooltip: ""
+	}
+
+	CharredScroll: {
+		DisplayName: Charred Scroll
+		Tooltip: ""
+	}
+
+	IceScroll: {
+		DisplayName: Ice Scroll
+		Tooltip: ""
+	}
+
+	LivingScroll: {
+		DisplayName: Living Scroll
+		Tooltip: ""
+	}
+
+	WaterScroll: {
+		DisplayName: Water Scroll
+		Tooltip: ""
+	}
+
+	BestHealingSpell: {
+		DisplayName: Best Healing Spell
+		Tooltip: ""
+	}
+
+	GlassVial: {
+		DisplayName: Glass Vial
+		Tooltip: ""
+	}
+
+	GreaterManaSpell: {
+		DisplayName: Greater Mana Spell
+		Tooltip: ""
+	}
+
+	GreatHealingSpell: {
+		DisplayName: Great Healing Spell
+		Tooltip: ""
+	}
+
+	GreatManaSpell: {
+		DisplayName: Great Mana Spell
+		Tooltip: ""
+	}
+
+	HealVialSpell: {
+		DisplayName: Heal Vial Spell
+		Tooltip: ""
+	}
+
+	HoneySpell: {
+		DisplayName: Honey Spell
+		Tooltip: ""
+	}
+
+	HoneyVial: {
+		DisplayName: Honey Vial
+		Tooltip: ""
+	}
+
+	ManaSpell: {
+		DisplayName: Mana Spell
+		Tooltip: ""
+	}
+
+	PoisonSpell: {
+		DisplayName: Poison Spell
+		Tooltip: ""
+	}
+
+	WaterVial: {
+		DisplayName: Water Vial
+		Tooltip: ""
+	}
+}
+
+NPCs: {
+	GemSlime.DisplayName: Gem Slime
+	SpellSlime.DisplayName: Spell Slime
+
+	Apprentice: {
+		DisplayName: Apprentice
+
+		TownNPCMood: {
+			Content: I am content.
+			NoHome: I hate not having a home.
+			FarFromHome: I am too far from home.
+			LoveSpace: I love having so much space.
+			DislikeCrowded: I dislike how crowded I am.
+			HateCrowded: I hate how crowded I am.
+			LikeNPC_Princess: I like {NPCName}.
+			Princess_LovesNPC: I like {NPCName}.
+		}
+
+		Census.SpawnCondition: Conditions unknown
+	}
+}
+
+Prefixes: {
+	Bewitched.DisplayName: Bewitched
+	Blessed.DisplayName: Blessed
+	Cursed.DisplayName: Cursed
+	Divine.DisplayName: Divine
+	Enchanted.DisplayName: Enchanted
+}
+
+Projectiles: {
+	EnchantedDaggerProjectile.DisplayName: Enchanted Dagger Projectile
+	AmethystBeam.DisplayName: Amethyst Beam
+	ApprenticeProj.DisplayName: Apprentice Proj
+	AquaticFuryProj1.DisplayName: Aquatic Fury Proj1
+	AquaticFuryProj2.DisplayName: Aquatic Fury Proj2
+	ArcaneShieldProj.DisplayName: Arcane Shield Proj
+	ArcaneShieldProj2.DisplayName: Arcane Shield Proj2
+	ArcaneShieldProj3.DisplayName: Arcane Shield Proj3
+	ArcaneShieldProj4.DisplayName: Arcane Shield Proj4
+	AshenProj.DisplayName: Ashen Proj
+	AshenProj2.DisplayName: Ashen Proj2
+	AshenTomeProj.DisplayName: Ashen Tome Proj
+	AurorProj.DisplayName: Auror Proj
+	BatOrbProj.DisplayName: Bat Orb Proj
+	BatProj.DisplayName: Bat Proj
+	BatProj2.DisplayName: Bat Proj2
+	BloodyProj.DisplayName: Bloody Proj
+	BlueMagicProj.DisplayName: Blue Magic Proj
+	BunnyProj.DisplayName: Bunny Proj
+	CactusProj.DisplayName: Cactus Proj
+	CelestialSkyProj.DisplayName: Celestial Sky Proj
+	ChainSpaceLaser.DisplayName: Chain Space Laser
+	CrimsonWave.DisplayName: Crimson Wave
+	CrimsonWaveProj.DisplayName: Crimson Wave Proj
+	CycloneLightning.DisplayName: Cyclone Lightning
+	CycloneLightningForked.DisplayName: Cyclone Lightning Forked
+	DarkExplosion.DisplayName: Dark Explosion
+	DarkProj.DisplayName: Dark Proj
+	DeathEaterProj.DisplayName: Death Eater Proj
+	DeathEaterSkullPlayer.DisplayName: Death Eater Skull Player
+	DeathProj.DisplayName: Death Proj
+	DeepslateBolt.DisplayName: Deepslate Bolt
+	DemonGauntletProjectile.DisplayName: Demon Gauntlet Projectile
+	DemonWave.DisplayName: Demon Wave
+	DemonWaveProj.DisplayName: Demon Wave Proj
+	DiamondBeam.DisplayName: Diamond Beam
+	DreamProj.DisplayName: Dream Proj
+	DreamProj2.DisplayName: Dream Proj2
+	EbonwoodProj.DisplayName: Ebonwood Proj
+	EmeraldBeam.DisplayName: Emerald Beam
+	EmeraldBeamReal.DisplayName: Emerald Beam Real
+	EmeraldSnakeBody.DisplayName: Emerald Snake Body
+	EmeraldSnakeHead.DisplayName: Emerald Snake Head
+	EnchantedGauntletCharged.DisplayName: Enchanted Gauntlet Charged
+	EnchantedGauntletProjectile.DisplayName: Enchanted Gauntlet Projectile
+	EnchantedGauntletShield.DisplayName: Enchanted Gauntlet Shield
+	EnchantedProj.DisplayName: Enchanted Proj
+	EnergizerLaser.DisplayName: Energizer Laser
+	EnergizerLightning.DisplayName: Energizer Lightning
+	EnergyLightning.DisplayName: Energy Lightning
+	EnergyProj.DisplayName: Energy Proj
+	EnergyProjMiddle.DisplayName: Energy Proj Middle
+	ExampleLaser.DisplayName: Example Laser
+	Explosion.DisplayName: Explosion
+	ExplosionDark.DisplayName: Explosion Dark
+	ExplosionIce.DisplayName: Explosion Ice
+	ExplosionLarge.DisplayName: Explosion Large
+	FiendfyreLaser.DisplayName: Fiendfyre Laser
+	FireballDie.DisplayName: Fireball Die
+	FireballDieIce.DisplayName: Fireball Die Ice
+	FireBoltHeld.DisplayName: Fire Bolt Held
+	FireBoltNormal.DisplayName: Fire Bolt Normal
+	FireBoltProj.DisplayName: Fire Bolt Proj
+	FlameProj.DisplayName: Flame Proj
+	FreezeFlameProj.DisplayName: Freeze Flame Proj
+	FreezeFlameProj2.DisplayName: Freeze Flame Proj2
+	FrostBoltProj.DisplayName: Frost Bolt Proj
+	FrostProj.DisplayName: Frost Proj
+	FrozenProj.DisplayName: Frozen Proj
+	FrozenProj2.DisplayName: Frozen Proj2
+	GandalfFireProj.DisplayName: Gandalf Fire Proj
+	GlacierProj.DisplayName: Glacier Proj
+	GreenGauntletHeld.DisplayName: Green Gauntlet Held
+	HealingOrb.DisplayName: Healing Orb
+	HealingOrb2.DisplayName: Healing Orb2
+	HealingOrb3.DisplayName: Healing Orb3
+	HealingOrb4.DisplayName: Healing Orb4
+	HellFireBolt.DisplayName: Hell Fire Bolt
+	HomingCrimson.DisplayName: Homing Crimson
+	IceBoltProj.DisplayName: Ice Bolt Proj
+	IcicleProj.DisplayName: Icicle Proj
+	LifestealProj.DisplayName: Lifesteal Proj
+	LightExplosion.DisplayName: Light Explosion
+	LightningDirection.DisplayName: Lightning Direction
+	LightningProj.DisplayName: Lightning Proj
+	LivingOrb.DisplayName: Living Orb
+	LivingProj.DisplayName: Living Proj
+	MagicProjBasic.DisplayName: Magic Proj Basic
+	MagicProjSmall.DisplayName: Magic Proj Small
+	MagicWandProj.DisplayName: Magic Wand Proj
+	MagmaLightning.DisplayName: Magma Lightning
+	MasterProj.DisplayName: Master Proj
+	MoltenSphere.DisplayName: Molten Sphere
+	MonsoonBlast.DisplayName: Monsoon Blast
+	NecroticExplosion.DisplayName: Necrotic Explosion
+	NecroticOrb.DisplayName: Necrotic Orb
+	PocketFireballProjectile.DisplayName: Pocket Fireball Projectile
+	RadiationLaser.DisplayName: Radiation Laser
+	RadiationLightning.DisplayName: Radiation Lightning
+	RadiationProjectile.DisplayName: Radiation Projectile
+	RainbowBeam.DisplayName: Rainbow Beam
+	RainbowSpear.DisplayName: Rainbow Spear
+	ReaperProj.DisplayName: Reaper Proj
+	RelicRock.DisplayName: Relic Rock
+	RelicRockSmash.DisplayName: Relic Rock Smash
+	RockSmashPartProj.DisplayName: Rock Smash Part Proj
+	RockSmashProj.DisplayName: Rock Smash Proj
+	RottenProj.DisplayName: Rotten Proj
+	RubyBeam.DisplayName: Ruby Beam
+	RubySpear.DisplayName: Ruby Spear
+	SapphireBeam.DisplayName: Sapphire Beam
+	SapphireBeamMini.DisplayName: Sapphire Beam Mini
+	ShadewoodProj.DisplayName: Shadewood Proj
+	ShadowExplosion.DisplayName: Shadow Explosion
+	ShadowProj.DisplayName: Shadow Proj
+	SorcererProj.DisplayName: Sorcerer Proj
+	SparkProj.DisplayName: Spark Proj
+	SpellSlimeProj.DisplayName: Spell Slime Proj
+	SpiralProj.DisplayName: Spiral Proj
+	StardustProj.DisplayName: Stardust Proj
+	StardustProjMini.DisplayName: Stardust Proj Mini
+	StormSenderProj.DisplayName: Storm Sender Proj
+	SuperExplosion.DisplayName: Super Explosion
+	SuperNova.DisplayName: Super Nova
+	SuperNovaDisc.DisplayName: Super Nova Disc
+	SuperNovaSlice.DisplayName: Super Nova Slice
+	ThornProj.DisplayName: Thorn Proj
+	ThunderboltStrike.DisplayName: Thunderbolt Strike
+	ThunderDust.DisplayName: Thunder Dust
+	ThunderDustDamage.DisplayName: Thunder Dust Damage
+	ThunderProj.DisplayName: Thunder Proj
+	ThunderStaffProj.DisplayName: Thunder Staff Proj
+	ThunderStrikeProj.DisplayName: Thunder Strike Proj
+	ToothProj.DisplayName: Tooth Proj
+	TopazBeam.DisplayName: Topaz Beam
+	TopazBeamReal.DisplayName: Topaz Beam Real
+	TumorClump.DisplayName: Tumor Clump
+	UnicornPatronus.DisplayName: Unicorn Patronus
+	UnicornPatronusRight.DisplayName: Unicorn Patronus Right
+	WaterboltMini.DisplayName: Waterbolt Mini
+	WaterExplosion.DisplayName: Water Explosion
+	WaterfrontProj.DisplayName: Waterfront Proj
+	WeeperProj.DisplayName: Weeper Proj
+	WizardProj.DisplayName: Wizard Proj
+	CharredScrollProj.DisplayName: Charred Scroll Proj
+	IceScrollProj.DisplayName: Ice Scroll Proj
+	LivingScrollProj.DisplayName: Living Scroll Proj
+	WaterScrollProj.DisplayName: Water Scroll Proj
+	BestHealingSpellProj.DisplayName: Best Healing Spell Proj
+	BestHealLinger.DisplayName: Best Heal Linger
+	GreaterManaLinger.DisplayName: Greater Mana Linger
+	GreaterManaSpellProj.DisplayName: Greater Mana Spell Proj
+	GreatHealingSpellProj.DisplayName: Great Healing Spell Proj
+	GreatHealLinger.DisplayName: Great Heal Linger
+	GreatManaLinger.DisplayName: Great Mana Linger
+	GreatManaSpellProj.DisplayName: Great Mana Spell Proj
+	HealLinger.DisplayName: Heal Linger
+	HealVialProj.DisplayName: Heal Vial Proj
+	HoneyLinger.DisplayName: Honey Linger
+	HoneySpellProj.DisplayName: Honey Spell Proj
+	ManaLinger.DisplayName: Mana Linger
+	ManaSpellProj.DisplayName: Mana Spell Proj
+	PoisonLinger.DisplayName: Poison Linger
+	PoisonSpellProj.DisplayName: Poison Spell Proj
+}
