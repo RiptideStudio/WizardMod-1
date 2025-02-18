@@ -30,13 +30,12 @@ public class FireBolt : ModItem
         Item.noMelee = true;
         Item.UseSound = SoundID.Item20;
         Item.autoReuse = true;
-        Item.shoot = 1;
         Item.shootSpeed = 3.75f;
     }
 
     public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
     {
-        Projectile.NewProjectile((IEntitySource)source, new Vector2(position.X + 12f, position.Y + 24f), velocity, Mod.Find<ModProjectile>("FireBoltProj").Type, damage, knockback, player.whoAmI, 2f, 2f);
+        Projectile.NewProjectile((IEntitySource)source, new Vector2(position.X + 12f, position.Y + 4f), velocity, Mod.Find<ModProjectile>("FireBoltProj").Type, damage, knockback, player.whoAmI, 2f, 2f);
         return false;
     }
 

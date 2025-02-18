@@ -139,31 +139,14 @@ public class Global : ModPlayer
 				Main.dust[num372].noGravity = true;
 			}
 		}
-		if (this.enchantedArmor)
-		{
-			if (Player.velocity.X != 0f)
-			{
-				if (Player.direction == 1)
-				{
-					int num374 = Dust.NewDust(new Vector2(Player.position.X - 8f, Player.position.Y), Player.width, Player.height, 15, 0f, 0f, 100, default(Color), 1.5f);
-					Main.dust[num374].velocity *= 0f;
-					Main.dust[num374].noGravity = true;
-				}
-				else
-				{
-					int num375 = Dust.NewDust(new Vector2(Player.position.X + 8f, Player.position.Y), Player.width, Player.height, 15, 0f, 0f, 100, default(Color), 1.5f);
-					Main.dust[num375].velocity *= 0f;
-					Main.dust[num375].noGravity = true;
-				}
-			}
-			if (Player.velocity.Y != 0f)
-			{
-				int num373 = Dust.NewDust(new Vector2(Player.position.X, Player.position.Y), Player.width, Player.height, 15, 0f, 0f, 100, default(Color), 1.5f);
-				Main.dust[num373].velocity *= 0f;
-				Main.dust[num373].noGravity = true;
-			}
-		}
-		if (this.livingArmor && Player.ownedProjectileCounts[Mod.Find<ModProjectile>("LivingOrb").Type] == 0)
+        if (this.enchantedArmor && (Player.velocity.X != 0f || Player.velocity.Y != 0f))
+        {
+            Vector2 dustPosition = Player.position + new Vector2(Player.velocity.X != 0f ? (Player.direction == 1 ? -8f : 8f) : 0f, 0f);
+            int dustIndex = Dust.NewDust(dustPosition, Player.width, Player.height, 15, 0f, 0f, 100, default(Color), 1.5f);
+            Main.dust[dustIndex].velocity = Vector2.Zero;
+            Main.dust[dustIndex].noGravity = true;
+        }
+        if (this.livingArmor && Player.ownedProjectileCounts[Mod.Find<ModProjectile>("LivingOrb").Type] == 0)
 		{
 			Projectile.NewProjectile(Terraria.Entity.GetSource_NaturalSpawn(), Player.position, new Vector2(0f, 0f), Mod.Find<ModProjectile>("LivingOrb").Type, 12, 0f, Player.whoAmI, 0f, 0f);
 		}
