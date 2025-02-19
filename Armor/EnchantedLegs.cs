@@ -32,13 +32,13 @@ public class EnchantedLegs : ModItem
 		Recipe recipe = CreateRecipe();
 		recipe.AddIngredient(null, "EnchantedShard", 10);
 		recipe.AddIngredient(19, 7);
-		recipe.AddIngredient(null, "EnchantedSilk", 3);
+		recipe.AddIngredient(null, "EnchantedSilk", 4);
 		recipe.AddTile(null, "ArcaneTable");
 		recipe.Register();
 		Recipe recipe2 = CreateRecipe();
 		recipe2.AddIngredient(null, "EnchantedShard", 10);
 		recipe2.AddIngredient(706, 7);
-		recipe2.AddIngredient(null, "EnchantedSilk", 3);
+		recipe2.AddIngredient(null, "EnchantedSilk", 4);
 		recipe2.AddTile(null, "ArcaneTable");
 		recipe2.Register();
 	}

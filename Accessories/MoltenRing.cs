@@ -1,4 +1,5 @@
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 using WizardMod.World;
 
@@ -30,14 +31,14 @@ public class MoltenRing : ModItem
 	{
 		Recipe recipe = CreateRecipe();
 		recipe.AddIngredient(null, "MetalBand");
-		recipe.AddIngredient(null, "MoltenShard");
-		recipe.AddIngredient(19, 5);
+		recipe.AddIngredient(null, "MoltenShard",3);
+		recipe.AddIngredient(ItemID.GoldBar, 5);
 		recipe.AddTile(null, "ArcaneTable");
 		recipe.Register();
 		Recipe recipe2 = CreateRecipe();
 		recipe2.AddIngredient(null, "MetalBand");
-		recipe2.AddIngredient(null, "MoltenShard");
-		recipe2.AddIngredient(706, 5);
+		recipe2.AddIngredient(null, "MoltenShard",3);
+		recipe2.AddIngredient(ItemID.PlatinumBar, 5);
 		recipe2.AddTile(null, "ArcaneTable");
 		recipe2.Register();
 	}

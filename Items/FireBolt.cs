@@ -30,6 +30,7 @@ public class FireBolt : ModItem
         Item.noMelee = true;
         Item.UseSound = SoundID.Item20;
         Item.autoReuse = true;
+        Item.shoot = 1;
         Item.shootSpeed = 3.75f;
     }
 

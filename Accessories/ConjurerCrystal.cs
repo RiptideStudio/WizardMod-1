@@ -1,4 +1,5 @@
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 using WizardMod.World;
 
@@ -37,7 +38,7 @@ public class ConjurerCrystal : ModItem
 		Recipe recipe = CreateRecipe();
 		recipe.AddIngredient(null, "LifeCrystal");
 		recipe.AddIngredient(null, "ClearCrystal");
-		recipe.AddTile(114);
+		recipe.AddTile(TileID.TinkerersWorkbench);
 		recipe.Register();
 	}
 }

@@ -79,17 +79,17 @@ public class PocketFireballProjectile : ModProjectile
 		}
 	}
 
-	public virtual void OnHitNPC(NPC target, int damage, float knockback, bool crit)
-	{
-		for (int i = 0; i < 7; i++)
-		{
-			int dust = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, 6);
-			int dust2 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, 127);
-			Main.dust[dust].velocity *= 3f;
-			Main.dust[dust2].velocity *= 3f;
-		}
-		target.AddBuff(24, 60);
-	}
+    public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
+    {
+        for (int i = 0; i < 7; i++)
+        {
+            int dust = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, 6);
+            int dust2 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, 127);
+            Main.dust[dust].velocity *= 3f;
+            Main.dust[dust2].velocity *= 3f;
+        }
+        target.AddBuff(BuffID.OnFire, 60);
+    }
 
 	public override void OnKill(int timeLeft)
 	{

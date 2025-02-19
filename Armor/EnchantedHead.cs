@@ -50,13 +50,14 @@ public class EnchantedHead : ModItem
         Recipe recipe = CreateRecipe();
         recipe.AddIngredient(null, "EnchantedShard", 7);
         recipe.AddIngredient(19, 5);
-        recipe.AddIngredient(null, "EnchantedSilk", 2);
+        recipe.AddIngredient(null, "EnchantedSilk", 3);
         recipe.AddTile(null, "ArcaneTable");
         recipe.Register();
+
         Recipe recipe2 = CreateRecipe();
         recipe2.AddIngredient(null, "EnchantedShard", 7);
         recipe2.AddIngredient(706, 5);
-        recipe2.AddIngredient(null, "EnchantedSilk", 2);
+        recipe2.AddIngredient(null, "EnchantedSilk", 3);
         recipe2.AddTile(null, "ArcaneTable");
         recipe2.Register();
     }

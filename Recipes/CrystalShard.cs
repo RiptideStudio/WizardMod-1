@@ -1,4 +1,5 @@
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace WizardMod.Recipes;
@@ -23,7 +24,7 @@ public class CrystalShard : ModItem
 	{
 		Recipe recipe = Recipe.Create(502);
 		recipe.AddIngredient(null, "MagicSoul");
-		recipe.AddIngredient(520);
+		recipe.AddIngredient(ItemID.SoulofLight);
 		recipe.AddTile(null, "WizardTable");
 		recipe.Register();
 	}

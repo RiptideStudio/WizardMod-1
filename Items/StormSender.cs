@@ -22,8 +22,8 @@ public class StormSender : ModItem
 		Item.mana = 12;
 		Item.width = 16;
 		Item.height = 32;
-		Item.useTime = 27;
-		Item.useAnimation = 27;
+		Item.useTime = 24;
+		Item.useAnimation = 24;
 		Item.useStyle = 5;
 		Item.knockBack = 4f;
 		Item.value = 20000;

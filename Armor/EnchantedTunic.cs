@@ -1,4 +1,5 @@
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 using WizardMod.World;
 
@@ -36,15 +37,16 @@ public class EnchantedTunic : ModItem
 		Recipe recipe = CreateRecipe();
 		recipe.AddIngredient(null, "EnchantedShard", 12);
 		recipe.AddIngredient(19, 10);
-		recipe.AddIngredient(null, "EnchantedSilk", 4);
-		recipe.AddIngredient(178);
-		recipe.AddTile(null, "ArcaneTable");
+		recipe.AddIngredient(null, "EnchantedSilk", 6);
+		recipe.AddIngredient(ItemID.Ruby,3);
+        recipe.AddTile(null, "ArcaneTable");
 		recipe.Register();
+
 		Recipe recipe2 = CreateRecipe();
 		recipe2.AddIngredient(null, "EnchantedShard", 12);
 		recipe2.AddIngredient(706, 10);
-		recipe2.AddIngredient(null, "EnchantedSilk", 4);
-		recipe2.AddIngredient(178);
+		recipe2.AddIngredient(null, "EnchantedSilk", 6);
+		recipe2.AddIngredient(ItemID.Ruby,3);
 		recipe2.AddTile(null, "ArcaneTable");
 		recipe2.Register();
 	}

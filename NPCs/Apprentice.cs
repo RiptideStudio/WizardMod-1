@@ -38,17 +38,17 @@ public class Apprentice : ModNPC
 		AnimationType = 22;
 	}
 
-	public virtual bool CanTownNPCSpawn(int numTownNPCs, int money)
-	{
-		for (int i = 0; i < 255; i++)
-		{
-			if (Main.player[i].statManaMax > 40)
-			{
-				return true;
-			}
-		}
-		return false;
-	}
+    public override bool CanTownNPCSpawn(int numTownNPCs)
+    {
+        for (int i = 0; i < 255; i++)
+        {
+            if (Main.player[i].statManaMax > 40)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 
 	public override List<string> SetNPCNameList()
 	{

@@ -1,4 +1,5 @@
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 using WizardMod.World;
 
@@ -33,13 +34,13 @@ public class LunarLoop : ModItem
 		Recipe recipe = CreateRecipe();
 		recipe.AddIngredient(null, "MetalBand");
 		recipe.AddIngredient(null, "InfusedStar", 35);
-		recipe.AddIngredient(19, 3);
+		recipe.AddIngredient(ItemID.GoldBar, 3);
 		recipe.AddTile(null, "ArcaneTable");
 		recipe.Register();
 		Recipe recipe2 = CreateRecipe();
 		recipe2.AddIngredient(null, "MetalBand");
 		recipe2.AddIngredient(null, "InfusedStar", 35);
-		recipe2.AddIngredient(706, 3);
+		recipe2.AddIngredient(ItemID.PlatinumBar, 3);
 		recipe2.AddTile(null, "ArcaneTable");
 		recipe2.Register();
 	}

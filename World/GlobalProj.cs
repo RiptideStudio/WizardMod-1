@@ -8,14 +8,12 @@ namespace WizardMod.World;
 
 public class GlobalProj : GlobalProjectile
 {
-	public virtual void OnHitNPC(Projectile projectile, NPC target, int damage, float knockback, bool crit)
-	{
-		//IL_0337: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0615: Unknown result type (might be due to invalid IL or missing references)
-		Player player = Main.player[projectile.owner];
+    public override void OnHitNPC(Projectile projectile, NPC target, NPC.HitInfo hit, int damageDone)
+    {
+        Player player = Main.player[projectile.owner];
 		if (player.GetModPlayer<Global>().moltenRing && Main.rand.Next(0, 4) == 0)
 		{
-			target.AddBuff(Mod.Find<ModBuff>("DeepslateBuff").Type, 120);
+			target.AddBuff(Mod.Find<ModBuff>("DeepslateBuff").Type, 60);
 		}
 		if (projectile.type == 306 || projectile.type == 307)
 		{
@@ -138,7 +136,7 @@ public class GlobalProj : GlobalProjectile
 					target.AddBuff(Mod.Find<ModBuff>("DarknessDebuff").Type, 120);
 				}
 			}
-			player.GetModPlayer<Global>().damageDealt += damage;
+			player.GetModPlayer<Global>().damageDealt += damageDone;
 			if (player.GetModPlayer<Global>().damageDealt >= 250)
 			{
 				player.GetModPlayer<Global>().damageDealt = 0;
@@ -152,8 +150,8 @@ public class GlobalProj : GlobalProjectile
 					int num2 = Dust.NewDust(new Vector2(target.position.X, target.position.Y), target.width, target.height, 14, 0f, 0f, 100, default(Color), 1.5f);
 					Main.dust[num2].velocity *= 2f;
 				}
-				int newDamage2 = damage;
-				if (damage > 25)
+				int newDamage2 = damageDone;
+				if (damageDone > 25)
 				{
 					newDamage2 = 25;
 				}
@@ -181,13 +179,13 @@ public class GlobalProj : GlobalProjectile
 					target.AddBuff(Mod.Find<ModBuff>("LifestealDebuff").Type, 120);
 				}
 			}
-			player.GetModPlayer<Global>().damageDealt += damage;
+			player.GetModPlayer<Global>().damageDealt += damageDone;
 			if (player.GetModPlayer<Global>().damageDealt >= 300)
 			{
 				player.GetModPlayer<Global>().damageDealt = 0;
 				SoundEngine.PlaySound(SoundID.NPCHit21, (Vector2?)projectile.position);
-				int newDamage = damage;
-				if (damage > 25)
+				int newDamage = damageDone;
+				if (damageDone > 25)
 				{
 					newDamage = 25;
 				}
@@ -216,7 +214,7 @@ public class GlobalProj : GlobalProjectile
 		{
 			player.GetModPlayer<Global>().diveBomb = false;
 			new Vector2(Main.rand.Next(0, 9));
-			int maxDamage = damage;
+			int maxDamage = damageDone;
 			if (maxDamage > 25)
 			{
 				maxDamage = 25;
@@ -225,7 +223,7 @@ public class GlobalProj : GlobalProjectile
 			Main.projectile[proj].tileCollide = false;
 			Main.projectile[proj].penetrate = 1;
 		}
-		if (crit && projectile.CountsAsClass(DamageClass.Magic))
+		if (hit.Crit && projectile.CountsAsClass(DamageClass.Magic))
 		{
 			player.statMana += player.GetModPlayer<Global>().manaOnHit;
 			player.ManaEffect(player.GetModPlayer<Global>().manaOnHit);

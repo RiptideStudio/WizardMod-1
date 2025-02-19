@@ -1,4 +1,5 @@
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 using WizardMod.World;
 
@@ -33,15 +34,17 @@ public class CelestialHoop : ModItem
 	public override void AddRecipes()
 	{
 		Recipe recipe = CreateRecipe();
-		recipe.AddIngredient(null, "MetalBand");
-		recipe.AddIngredient(null, "InfusedStar", 35);
-		recipe.AddIngredient(19, 3);
+		recipe.AddIngredient(null, "LunarLoop");
+		recipe.AddIngredient(null, "InfusedStar", 25);
+        recipe.AddIngredient(ItemID.CrimtaneBar, 5);
+        recipe.AddIngredient(null, "EnchantedShard", 3);
 		recipe.AddTile(null, "ArcaneTable");
 		recipe.Register();
 		Recipe recipe2 = CreateRecipe();
-		recipe2.AddIngredient(null, "MetalBand");
-		recipe2.AddIngredient(null, "InfusedStar", 35);
-		recipe2.AddIngredient(706, 3);
+		recipe2.AddIngredient(null, "LunarLoop");
+		recipe2.AddIngredient(null, "InfusedStar", 25);
+        recipe2.AddIngredient(ItemID.DemoniteBar, 5);
+        recipe2.AddIngredient(null, "EnchantedShard", 3);
 		recipe2.AddTile(null, "ArcaneTable");
 		recipe2.Register();
 	}

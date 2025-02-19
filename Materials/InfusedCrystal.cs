@@ -1,4 +1,5 @@
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace WizardMod.Materials;
@@ -13,31 +14,25 @@ public class InfusedCrystal : ModItem
 
 	public override void SetDefaults()
 	{
-		Item.CloneDefaults(109);
-		Item.rare = 3;
+		Item.CloneDefaults(ItemID.ManaCrystal);
+		Item.rare = ItemRarityID.Orange;
 	}
 
 	public override void AddRecipes()
 	{
 		Recipe recipe = CreateRecipe();
-		recipe.AddIngredient(null, "InfusedStar", 25);
-		recipe.AddIngredient(null, "MagicSoul", 3);
+		recipe.AddIngredient(null, "InfusedStar", 50);
 		recipe.AddTile(null, "ArcaneTable");
 		recipe.Register();
 	}
 
-	public override bool CanUseItem(Player player)
-	{
-		return true;
-	}
-
-	public override bool? UseItem(Player player)
-	{
-		if (player.statManaMax < 200)
-		{
-			player.statManaMax = 200;
+    public override bool ConsumeItem(Player player)
+    {
+        if (player.statManaMax < 200)
+        {
+            player.statManaMax = 200;
 			return true;
-		}
+        }
 		return false;
-	}
+    }
 }

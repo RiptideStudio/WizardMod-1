@@ -9,15 +9,9 @@ namespace WizardMod.Items;
 
 public class EnchantedTome : ModItem
 {
-    public override void SetStaticDefaults()
-    {
-        // DisplayName.SetDefault("Enchanted Tome");
-        // Tooltip.SetDefault("Rapidly shoots bolts of pure magic");
-    }
-
     public override void SetDefaults()
     {
-        Item.damage = 23;
+        Item.damage = 22;
         Item.DamageType = DamageClass.Magic;
         Item.mana = 8;
         Item.width = 16;
@@ -72,12 +66,11 @@ public class EnchantedTome : ModItem
     {
         return new Vector2(4f, 0f);
     }
-
     public override void AddRecipes()
     {
         Recipe recipe = CreateRecipe();
         recipe.AddIngredient(null, "EnchantedBook");
-        recipe.AddIngredient(null, "EnchantedShard", 9);
+        recipe.AddIngredient(null, "EnchantedShard", 15);
         recipe.AddTile(101);
         recipe.Register();
     }

@@ -1,4 +1,5 @@
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 using WizardMod.World;
 
@@ -32,7 +33,7 @@ public class ClearCrystal : ModItem
 	public override void AddRecipes()
 	{
 		Recipe recipe = CreateRecipe();
-		recipe.AddIngredient(109);
+		recipe.AddIngredient(ItemID.ManaCrystal);
 		recipe.AddIngredient(null, "InfusedStar", 5);
 		recipe.AddIngredient(null, "EnchantedShard");
 		recipe.AddTile(null, "ArcaneTable");

@@ -14,7 +14,6 @@ public class GemSlime : ModNPC
 
 	public override void SetStaticDefaults()
 	{
-		// DisplayName.SetDefault("Geo Slime");
 		Main.npcFrameCount[NPC.type] = Main.npcFrameCount[2];
 	}
 
@@ -24,7 +23,8 @@ public class GemSlime : ModNPC
 		NPC.height = 15;
 		NPC.damage = 16;
 		NPC.defense = 3;
-		NPC.lifeMax = 47;
+		NPC.lifeMax = 60;
+		NPC.knockBackResist = 0.33f;
 		NPC.value = 500f;
 		NPC.aiStyle = 1;
 		NPC.HitSound = SoundID.NPCHit1;

@@ -10,7 +10,6 @@ namespace WizardMod.Projectiles;
 public class FireBoltProj : ModProjectile
 {
 	private int dust_num = 162;
-
 	private int dust_num2 = 228;
 
 	public override void SetStaticDefaults()
@@ -77,7 +76,7 @@ public class FireBoltProj : ModProjectile
 			Dust.NewDust(position, Projectile.width, Projectile.height, this.dust_num);
 			Dust.NewDust(position, Projectile.width, Projectile.height, 6);
 		}
-		target.AddBuff(24, 180);
+		target.AddBuff(BuffID.OnFire, 180);
 	}
 
 	public override void OnKill(int timeLeft)
