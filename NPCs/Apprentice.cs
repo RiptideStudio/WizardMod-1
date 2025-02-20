@@ -1,7 +1,18 @@
+using ArcheryOverhaul.World;
 using System.Collections.Generic;
 using Terraria;
+using Terraria.GameContent.Bestiary;
+using Terraria.GameContent.ItemDropRules;
+using Terraria.GameContent.Personalities;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.Server;
+using WizardMod.Accessories;
+using WizardMod.Consumable;
+using WizardMod.Items;
+using WizardMod.Materials;
+using WizardMod.Scrolls;
+using WizardMod.Spells;
 
 namespace WizardMod.NPCs;
 
@@ -10,12 +21,14 @@ public class Apprentice : ModNPC
 {
 	private bool scrap;
 
-	public override void SetStaticDefaults()
-	{
-		// DisplayName.SetDefault("Apprentice");
-	}
+    public override void SetStaticDefaults()
+    {
+        NPC.Happiness.SetBiomeAffection<HallowBiome>(AffectionLevel.Like);
+        NPC.Happiness.SetNPCAffection(NPCID.Princess, AffectionLevel.Love);
+        NPC.Happiness.SetNPCAffection(NPCID.Princess, AffectionLevel.Like);
+    }
 
-	public override void SetDefaults()
+    public override void SetDefaults()
 	{
 		NPC.townNPC = true;
 		NPC.friendly = true;
@@ -38,19 +51,38 @@ public class Apprentice : ModNPC
 		AnimationType = 22;
 	}
 
+    public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
+    {
+        bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[] {
+				// Sets the preferred biomes of this town NPC listed in the bestiary.
+				// With Town NPCs, you usually set this to what biome it likes the most in regards to NPC happiness.
+				BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Surface,
+
+				// Sets your NPC's flavor text in the bestiary.
+				new FlavorTextBestiaryInfoElement("The Sorcerer's Apprentice, trained by none other than Balthazar himself."),
+            });
+    }
+
     public override bool CanTownNPCSpawn(int numTownNPCs)
     {
+        if (TownNPCRespawnSystem.unlockedApprentice)
+        {
+            return true;
+        }
+
         for (int i = 0; i < 255; i++)
         {
-            if (Main.player[i].statManaMax > 40)
+            Player player = Main.player[i];
+            if (player.statMana >= 40)
             {
-                return true;
+				return true;
             }
         }
         return false;
     }
 
-	public override List<string> SetNPCNameList()
+
+    public override List<string> SetNPCNameList()
 	{
 		return new List<string> { "Xion", "Tom", "Severus", "Alatar", "Alzeus" };
 	}
@@ -60,15 +92,37 @@ public class Apprentice : ModNPC
 		button = "Shop";
 		button2 = "Trade Magic Essence";
 	}
+    public override void AddShops()
+    {
+        NPCShop shop = new(NPC.type, "Shop");
+        shop.Add(ModContent.ItemType<PocketFireball>(), []);
+        shop.Add(ModContent.ItemType<EnchantedDagger>(), [Condition.DownedKingSlime]);
+        shop.Add(ModContent.ItemType<GlassVial>(), []);
+        shop.Add(ModContent.ItemType<Scroll>(), [Condition.DownedEowOrBoc]);
+        shop.Add(ModContent.ItemType<CharredScroll>(), [Condition.DownedEyeOfCthulhu]);
+        shop.Add(ModContent.ItemType<IceScroll>(), []);
+        shop.Add(ModContent.ItemType<ArcaneOrb>(), []);
+        shop.Add(ItemID.FallenStar, [Condition.TimeNight]);
+        shop.Add(ItemID.Amethyst, []);
+        shop.Add(ItemID.Topaz, []);
+        shop.Add(ItemID.Sapphire, []);
+        shop.Add(ItemID.Emerald, []);
+        shop.Add(ItemID.Ruby, [Condition.DownedEyeOfCthulhu]);
+        shop.Add(ItemID.Diamond, [Condition.DownedEyeOfCthulhu]);
+        shop.Add(ItemID.Amber, [Condition.DownedEowOrBoc]);
+        shop.Add(ModContent.ItemType<HealVialSpell>(), [Condition.DownedEyeOfCthulhu]);
+        shop.Add(ModContent.ItemType<ManaSpell>(), []);
+        shop.Add(ModContent.ItemType<GreatHealingSpell>(), [Condition.DownedEowOrBoc]);
+        shop.Add(ModContent.ItemType<GreaterManaSpell>(), [Condition.DownedEowOrBoc]);
 
-	public virtual void OnChatButtonClicked(bool firstButton, ref bool openShop)
-	{
+        shop.Register();
+    }
+
+    public override void OnChatButtonClicked(bool firstButton, ref string shopName)
+    {
 		if (firstButton)
 		{
-			openShop = true;
-		}
-		if (firstButton)
-		{
+			shopName = "Shop";
 			return;
 		}
 		for (int h = 0; h < 200; h++)
@@ -460,120 +514,6 @@ public class Apprentice : ModNPC
 		}
 	}
 
-	public virtual void SetupShop(Chest shop, ref int nextSlot)
-	{
-		shop.item[nextSlot].SetDefaults(Mod.Find<ModItem>("PocketFireball").Type);
-		shop.item[nextSlot].value = 7;
-		nextSlot++;
-		if (NPC.downedSlimeKing)
-		{
-			shop.item[nextSlot].SetDefaults(Mod.Find<ModItem>("EnchantedDagger").Type);
-			shop.item[nextSlot].value = 40;
-			nextSlot++;
-		}
-		shop.item[nextSlot].SetDefaults(Mod.Find<ModItem>("GlassVial").Type);
-		shop.item[nextSlot].value = 50;
-		nextSlot++;
-		if (NPC.downedSlimeKing)
-		{
-			shop.item[nextSlot].SetDefaults(Mod.Find<ModItem>("Scroll").Type);
-			nextSlot++;
-		}
-		if (NPC.downedBoss1)
-		{
-			shop.item[nextSlot].SetDefaults(Mod.Find<ModItem>("CharredScroll").Type);
-			shop.item[nextSlot].value = 20000;
-			nextSlot++;
-		}
-		if (NPC.downedBoss2)
-		{
-			shop.item[nextSlot].SetDefaults(Mod.Find<ModItem>("IceScroll").Type);
-			shop.item[nextSlot].value = 22500;
-			nextSlot++;
-		}
-		if (!Main.dayTime)
-		{
-			shop.item[nextSlot].SetDefaults(75);
-			shop.item[nextSlot].value = 5000;
-			nextSlot++;
-		}
-		shop.item[nextSlot].SetDefaults(Mod.Find<ModItem>("ArcaneOrb").Type);
-		nextSlot++;
-		shop.item[nextSlot].SetDefaults(181);
-		shop.item[nextSlot].value = 500;
-		nextSlot++;
-		shop.item[nextSlot].SetDefaults(180);
-		shop.item[nextSlot].value = 550;
-		nextSlot++;
-		if (NPC.downedSlimeKing)
-		{
-			shop.item[nextSlot].SetDefaults(177);
-			shop.item[nextSlot].value = 1500;
-			nextSlot++;
-			shop.item[nextSlot].SetDefaults(179);
-			shop.item[nextSlot].value = 2000;
-			nextSlot++;
-		}
-		if (NPC.downedBoss1)
-		{
-			shop.item[nextSlot].SetDefaults(178);
-			shop.item[nextSlot].value = 3500;
-			nextSlot++;
-			shop.item[nextSlot].SetDefaults(182);
-			shop.item[nextSlot].value = 5000;
-			nextSlot++;
-		}
-		if (NPC.downedBoss2)
-		{
-			shop.item[nextSlot].SetDefaults(999);
-			shop.item[nextSlot].value = 6000;
-			nextSlot++;
-		}
-		if (NPC.downedBoss1)
-		{
-			shop.item[nextSlot].SetDefaults(183);
-			shop.item[nextSlot].value = 25;
-			nextSlot++;
-		}
-		shop.item[nextSlot].SetDefaults(110);
-		shop.item[nextSlot].value -= 50;
-		nextSlot++;
-		shop.item[nextSlot].SetDefaults(28);
-		shop.item[nextSlot].value -= 100;
-		nextSlot++;
-		if (NPC.downedBoss1)
-		{
-			shop.item[nextSlot].SetDefaults(189);
-			nextSlot++;
-			shop.item[nextSlot].SetDefaults(188);
-			nextSlot++;
-			shop.item[nextSlot].SetDefaults(Mod.Find<ModItem>("HealVialSpell").Type);
-			shop.item[nextSlot].value *= 2;
-			nextSlot++;
-		}
-		shop.item[nextSlot].SetDefaults(Mod.Find<ModItem>("ManaSpell").Type);
-		nextSlot++;
-		if (NPC.downedBoss2)
-		{
-			shop.item[nextSlot].SetDefaults(Mod.Find<ModItem>("GreatHealingSpell").Type);
-			nextSlot++;
-			shop.item[nextSlot].SetDefaults(Mod.Find<ModItem>("GreatManaSpell").Type);
-			nextSlot++;
-			shop.item[nextSlot].SetDefaults(29);
-			shop.item[nextSlot].value = 50000;
-			nextSlot++;
-		}
-		if (NPC.downedBoss2)
-		{
-			shop.item[nextSlot].SetDefaults(173);
-			shop.item[nextSlot].value = 100;
-			nextSlot++;
-		}
-		_ = NPC.downedBoss3;
-		_ = NPC.downedMechBossAny;
-		_ = NPC.downedPlantBoss;
-	}
-
 	public override string GetChat()
 	{
 		if (this.scrap)
@@ -625,7 +565,8 @@ public class Apprentice : ModNPC
 		multiplier = 7f;
 	}
 
-	public override void OnKill()
-	{
-	}
+    public override void ModifyNPCLoot(NPCLoot npcLoot)
+    {
+        npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<SparkStaff>(), 5));
+    }
 }

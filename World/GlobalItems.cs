@@ -12,9 +12,10 @@ public class GlobalItems : GlobalItem
 		if (player.GetModPlayer<Global>().enchantedArmor && item.CountsAsClass(DamageClass.Magic))
 		{
 			player.GetModPlayer<Global>().enchantedNum++;
+			Vector2 beamVelocity = Vector2.Normalize(velocity) * new Vector2(10,10);
 			if (player.GetModPlayer<Global>().enchantedNum == 3)
 			{
-				Projectile.NewProjectile((IEntitySource)source, position, velocity * 0.75f, Mod.Find<ModProjectile>("MagicProjBasic").Type, damage, knockback, player.whoAmI, 0f, 0f);
+				Projectile.NewProjectile((IEntitySource)source, position, beamVelocity, Mod.Find<ModProjectile>("MagicProjBasic").Type, damage, knockback, player.whoAmI, 0f, 0f);
 				player.GetModPlayer<Global>().enchantedNum = 0;
 			}
 		}

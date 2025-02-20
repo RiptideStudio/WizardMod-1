@@ -86,7 +86,7 @@ public class GlobalItemList : GlobalItem
 			TooltipLine line7 = tooltips.LastOrDefault((TooltipLine x) => x.Name == "Tooltip1" && x.Mod == "Terraria");
 			if (line != null)
 			{
-				line.Text = "25% reduced mana usage\n5% decreased magic damage\nCritical stirke mana recovery increased by 3\nMana regeneration is greatly improved\nYou can no longer use mana potions";
+				line.Text = "25% reduced mana usage\n5% decreased magic damage\nCritical stirke mana recovery increased by 3\nMana regeneration is greatly improved";
 			}
 			if (line7 != null)
 			{
@@ -124,7 +124,6 @@ public class GlobalItemList : GlobalItem
 				player.statMana++;
 				this.timer = 0;
 			}
-			player.GetModPlayer<Global>().manaPotionOff = true;
 			player.GetModPlayer<Global>().manaOnHit += 3;
 		}
 	}

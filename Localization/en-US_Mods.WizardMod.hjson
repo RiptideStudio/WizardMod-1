@@ -1151,6 +1151,8 @@ NPCs: {
 			HateCrowded: I hate how crowded I am.
 			LikeNPC_Princess: I like {NPCName}.
 			Princess_LovesNPC: I like {NPCName}.
+			LikeBiome: I like {BiomeName}.
+			LikeNPC: I like {NPCName}.
 		}
 
 		Census.SpawnCondition: Conditions unknown

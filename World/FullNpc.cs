@@ -1,5 +1,6 @@
 using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace WizardMod.World;
@@ -55,13 +56,15 @@ public class FullNpc : GlobalNPC
 		Player player = Main.LocalPlayer;
 		if (player.GetModPlayer<Global>().overgrownPendant)
 		{
-			float numberProjectiles = 1 + Main.rand.Next(3);
-			Vector2 position = Vector2.Normalize(new Vector2(7f, 7f)) * 45f;
-			for (int i = 0; (float)i < numberProjectiles; i++)
+			int numberProjectiles = 2 + Main.rand.Next(2);
+			Vector2 position = npc.position;
+			for (int i = 0; i < numberProjectiles; i++)
 			{
 				float rotation = MathHelper.ToRadians(35 * Main.rand.Next(10));
 				Vector2 perturbedSpeed = new Vector2(85f, 85f).RotatedBy(MathHelper.Lerp(0f - rotation, rotation, (float)i / (numberProjectiles - 1f))) * 0.2f;
-				Projectile.NewProjectile(npc.GetSource_FromThis(), position, perturbedSpeed, 7, 7, 1f, player.whoAmI, 0f, 0f);
+				perturbedSpeed.Normalize();
+				perturbedSpeed *= new Vector2(15, 15);
+				Projectile.NewProjectile(npc.GetSource_FromThis(), position, perturbedSpeed, ProjectileID.VilethornBase, 6, 1f, player.whoAmI, 0f, 0f);
 			}
 		}
 	}

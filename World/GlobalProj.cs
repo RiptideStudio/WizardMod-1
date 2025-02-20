@@ -11,7 +11,17 @@ public class GlobalProj : GlobalProjectile
     public override void OnHitNPC(Projectile projectile, NPC target, NPC.HitInfo hit, int damageDone)
     {
         Player player = Main.player[projectile.owner];
-		if (player.GetModPlayer<Global>().moltenRing && Main.rand.Next(0, 4) == 0)
+        if (player.GetModPlayer<Global>().moltenRing && projectile.CountsAsClass(DamageClass.Magic) && Main.rand.Next(0, 3) == 1 && player.GetModPlayer<Global>().diveBomb)
+        {
+            Vector2 PhoenixVelocity = new Vector2(0,15);
+			player.GetModPlayer<Global>().diveBomb = false;
+            int proj = Projectile.NewProjectile(Entity.GetSource_NaturalSpawn(), new Vector2(target.position.X, player.position.Y - 600f), PhoenixVelocity, ProjectileID.DD2PhoenixBowShot, damageDone, 0f, player.whoAmI);
+            
+			Main.projectile[proj].tileCollide = false;
+            Main.projectile[proj].penetrate = 1;
+            Main.projectile[proj].velocity = PhoenixVelocity;
+        }
+        if (player.GetModPlayer<Global>().moltenRing && Main.rand.Next(0, 4) == 0)
 		{
 			target.AddBuff(Mod.Find<ModBuff>("DeepslateBuff").Type, 60);
 		}
@@ -210,19 +220,7 @@ public class GlobalProj : GlobalProjectile
 			target.AddBuff(24, 120);
 			target.AddBuff(Mod.Find<ModBuff>("DeepslateBuff").Type, 120);
 		}
-		if (player.GetModPlayer<Global>().moltenRing && projectile.CountsAsClass(DamageClass.Magic) && Main.rand.Next(0, 3) == 1 && player.GetModPlayer<Global>().diveBomb)
-		{
-			player.GetModPlayer<Global>().diveBomb = false;
-			new Vector2(Main.rand.Next(0, 9));
-			int maxDamage = damageDone;
-			if (maxDamage > 25)
-			{
-				maxDamage = 25;
-			}
-			int proj = Projectile.NewProjectile(Entity.GetSource_NaturalSpawn(), new Vector2(target.Center.X, player.position.Y - 600f), new Vector2(0f, 0f), 18, 706, (float)maxDamage, 1, (float)player.whoAmI, 0f);
-			Main.projectile[proj].tileCollide = false;
-			Main.projectile[proj].penetrate = 1;
-		}
+
 		if (hit.Crit && projectile.CountsAsClass(DamageClass.Magic))
 		{
 			player.statMana += player.GetModPlayer<Global>().manaOnHit;
