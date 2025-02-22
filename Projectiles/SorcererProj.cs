@@ -69,8 +69,8 @@ public class SorcererProj : ModProjectile
 		return false;
 	}
 
-	public virtual void OnHitNPC(NPC target, int damage, float knockback, bool crit)
-	{
+    public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
+    {
 		target.AddBuff(Mod.Find<ModBuff>("LightDebuff2").Type, 120);
 	}
 

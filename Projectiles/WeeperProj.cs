@@ -81,8 +81,8 @@ public class WeeperProj : ModProjectile
 		}
 	}
 
-	public virtual void OnHitNPC(NPC target, int damage, float knockback, bool crit)
-	{
+    public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
+    {
 		Player p = Main.player[Projectile.owner];
 		_ = Projectile.Center;
 		if (target.HasBuff(Mod.Find<ModBuff>("DarknessDebuff_2").Type))

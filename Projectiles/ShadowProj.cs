@@ -74,8 +74,8 @@ public class ShadowProj : ModProjectile
 		}
 	}
 
-	public virtual void OnHitNPC(NPC target, int damage, float knockback, bool crit)
-	{
+    public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
+    {
 		if (target.HasBuff(Mod.Find<ModBuff>("DarknessDebuff").Type))
 		{
 			target.AddBuff(Mod.Find<ModBuff>("DarknessDebuff_2").Type, 90);
